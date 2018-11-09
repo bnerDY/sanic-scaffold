@@ -1,0 +1,12 @@
+dependencies:  # the packages that can be installed by conda (preferred over pip because of better compatibility)
+- pytest=3
+- requests=2.13.0
+- gunicorn=19.1.0
+
+- celery=4.0.2
+
+- django=2.0.2
+- djangorestframework=3.7.7
+
+- pip:  # the packages that can only be installed by pip
+  - sanic==0.7.0
