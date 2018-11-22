@@ -9,11 +9,5 @@ version: "3"
 
 
 services:
-  config_gateway_service:
-    restart: always
-
-  policy_gateway_service:
-    restart: always
-
-  action_gateway_service:
+  example_web_service:
     restart: always

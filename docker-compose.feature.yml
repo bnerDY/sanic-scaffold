@@ -10,14 +10,6 @@ version: "3"
 
 
 services:
-  config_gateway_service:
+  example_web_service:
     ports:
       - 8000:8000
-
-  policy_gateway_service:
-    ports:
-      - 8001:8000
-
-  action_gateway_service:
-    ports:
-      - 8002:8000

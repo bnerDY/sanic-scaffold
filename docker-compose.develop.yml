@@ -10,17 +10,7 @@ version: "3"
 
 
 services:
-  config_gateway_service:
+  example_web_service:
     restart: always
     ports:
       - 8000:8000
-
-  policy_gateway_service:
-    restart: always
-    ports:
-      - 8001:8000
-
-  action_gateway_service:
-    restart: always
-    ports:
-      - 8002:8000

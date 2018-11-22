@@ -44,10 +44,10 @@ else
 fi
 
 
-export SPIDER_RUNTIME_STAGE=${STAGE}
-export SPIDER_RUNTIME_MODE="deploy"
+export PROJECT_RUNTIME_STAGE=${STAGE}
+export PROJECT_RUNTIME_MODE="deploy"
 
-#export SPIDER_LOG_FLUENTD_ADDRESS="10.176.16.57:24224"
+#export PROJECT_LOG_FLUENTD_ADDRESS="10.176.16.57:24224"
 
 
 function docker_compose_deploy() {

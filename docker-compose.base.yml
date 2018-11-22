@@ -4,8 +4,8 @@ version: "3"
 # This is the base docker compose config. The main purpose is to:
 # 1. List all of the services & dbs in the system
 # 2. Specify the docker image / build context for every service
-# 3. Make sure all the components are in the same virtual network "spider"
-# 4. Make sure all the components are under the same environment variables "SPIDER_*"
+# 3. Make sure all the components are in the same virtual network "project"
+# 4. Make sure all the components are under the same environment variables "PROJECT_*"
 # 5. Make sure all the components have the right dependencies on each other
 # 6. NO volume mounting
 # 7. NO port publishing for internal components
@@ -13,33 +13,14 @@ version: "3"
 
 
 services:
-  config_gateway_service:
+  example_web_service:
     build:
-      context: config_gateway_service
+      context: example_web_service
     networks:
-      spider:
+      project:
     environment:
-      - SPIDER_RUNTIME_STAGE=${SPIDER_RUNTIME_STAGE}
-      - SPIDER_RUNTIME_MODE=${SPIDER_RUNTIME_MODE}
-
-  policy_gateway_service:
-    build:
-      context: policy_gateway_service
-    networks:
-      spider:
-    environment:
-      - SPIDER_RUNTIME_STAGE=${SPIDER_RUNTIME_STAGE}
-      - SPIDER_RUNTIME_MODE=${SPIDER_RUNTIME_MODE}
-
-  action_gateway_service:
-    build:
-      context: action_gateway_service
-    networks:
-      spider:
-    environment:
-      - SPIDER_RUNTIME_STAGE=${SPIDER_RUNTIME_STAGE}
-      - SPIDER_RUNTIME_MODE=${SPIDER_RUNTIME_MODE}
-
+      - PROJECT_RUNTIME_STAGE=${PROJECT_RUNTIME_STAGE}
+      - PROJECT_RUNTIME_MODE=${PROJECT_RUNTIME_MODE}
 
 networks:
-  spider:
+  project:

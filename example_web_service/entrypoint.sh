@@ -7,7 +7,7 @@ export PYTHONUNBUFFERED=1
 
 cd /src
 
-if [ ${SPIDER_RUNTIME_MODE} = "test" ]; then
+if [ ${PROJECT_RUNTIME_MODE} = "test" ]; then
     exec python -m pytest
 else
     exec python app.py
