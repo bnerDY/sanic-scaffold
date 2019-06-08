@@ -1,4 +1,4 @@
-FROM raychee/python3
+FROM python:3.6.4-onbuild
 
 RUN yum install -y gcc
 
